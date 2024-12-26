@@ -38,59 +38,59 @@ const placeOrder = async(req,res) => {
 }
 
 // placing orders using stripe method
-const placeOrderStripe = async(req,res) => {
-    try{
-        const {userId,items,amount,address} = req.body
-        // origin for initiating payment
-        const {origin} = req.headers
+const placeOrderStripe = async (req, res) => {
+    try {
+        const { userId, items, amount, address } = req.body;
+        const frontEndURL = "https://ecommerce-fashion-store-frontend.onrender.com"; 
+
         const orderData = {
             userId,
             items,
             amount,
             address,
-            paymentMethod:"Stripe",
-            payment:false,
-            date: Date.now()
-        }
+            paymentMethod: "Stripe",
+            payment: false,
+            date: Date.now(),
+        };
 
-        const newOrder = new orderModel(orderData)//creating new order document
-        await newOrder.save()//saving document in mongodb database
-        
+        const newOrder = new orderModel(orderData); // creating new order document
+        await newOrder.save(); // saving document in MongoDB database
+
         const line_items = items.map((item) => ({
             price_data: {
                 currency: currency,
                 product_data: {
-                    name:item.name
+                    name: item.name,
                 },
-                unit_amount: item.price*100
+                unit_amount: item.price * 100,
             },
-            quantity:item.quantity
-        }))
+            quantity: item.quantity,
+        }));
 
-        line_items.push({price_data: {
+        line_items.push({
+            price_data: {
                 currency: currency,
                 product_data: {
-                    name:"Delivery fee"
+                    name: "Delivery fee",
                 },
-                unit_amount: deliveryCharge*100
+                unit_amount: deliveryCharge * 100,
             },
-            quantity:1
-        })
+            quantity: 1,
+        });
 
         const session = await stripe.checkout.sessions.create({
-            success_url: `${origin}/verify?success=true&orderId=${newOrder._id}`,
-            cancel_url: `${origin}/verify?success=false&orderId=${newOrder._id}`,
+            success_url: `${frontEndURL}/verify?success=true&orderId=${newOrder._id}`,
+            cancel_url: `${frontEndURL}/verify?success=false&orderId=${newOrder._id}`,
             line_items,
-            mode: "payment"
-        })
+            mode: "payment",
+        });
 
-        res.status(200).json({success:true,session_url:session.url})
+        res.status(200).json({ success: true, session_url: session.url });
+    } catch (error) {
+        console.log(error);
+        res.status(400).json({ success: false, message: error.message });
     }
-    catch(error){
-        console.log(error)
-        res.status(400).json({success:false,message:error.message})
-    }
-}
+};
 
 // verify stripe
 const verifyStripe = async(req,res) => {
