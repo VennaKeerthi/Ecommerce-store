@@ -22,7 +22,7 @@ This is a full-stack ecommerce application for a fashion store where users can b
 
 ### Frontend:
 - **React.js:** Dynamic and responsive UI
-- **Tailwind CSS / Bootstrap** (optional): Modern styling framework
+- **Tailwind CSS / Bootstrap** : Modern styling framework
 
 ### Backend:
 - **Node.js:** Server-side logic
@@ -35,4 +35,4 @@ This is a full-stack ecommerce application for a fashion store where users can b
 
 ### Deployment:
 - **Frontend:** Render
-- **Backend:** Deployed on Render or other hosting platforms
+- **Backend:** Deployed on Render 
