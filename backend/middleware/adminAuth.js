@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken"
+import cors from 'cors'
 
 const adminAuth = async(req,res,next) => {
     try{

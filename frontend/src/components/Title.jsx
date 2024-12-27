@@ -1,4 +1,5 @@
 import React from "react";
+import { useMemo } from "react";
 
 const Title = ({text1,text2}) => {
     return (

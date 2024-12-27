@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/assets";
 import { useLocation } from "react-router-dom";
+import { useMemo } from "react";
 
 const SearchBar = () => {
     const {search,setSearch,showSearch,setShowSearch} = useContext(ShopContext);

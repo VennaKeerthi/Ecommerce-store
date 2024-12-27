@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { backendUrl } from "../App";
 import axios from "axios";
 import {toast} from "react-toastify";
+import cors from 'cors'
 
 const Login = ({setToken}) => {
 

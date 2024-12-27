@@ -1,6 +1,7 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { Link } from "react-router-dom";
+import { useMemo } from "react";
 
 const Footer = () => {
     return (

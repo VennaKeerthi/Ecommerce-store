@@ -1,5 +1,6 @@
 import express from "express";
 import { loginUser,registerUser,adminLogin } from "../controllers/userController.js";
+import cors from 'cors'
 
 const userRouter = express.Router();
 

@@ -5,6 +5,7 @@ import './index.css'
 import {BrowserRouter} from 'react-router-dom'
 import ShopContextProvider from './context/ShopContext.jsx'
 
+
 const root = createRoot(document.getElementById('root'))
 
 root.render(

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
 import { Link } from "react-router-dom";
+import { useMemo } from "react";
 
 const ProductItem = ({id,image,name,price}) => {
     const {currency} =useContext(ShopContext)

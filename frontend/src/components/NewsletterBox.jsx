@@ -1,4 +1,5 @@
 import React from "react";
+import { useMemo } from "react";
 
 const NewsletterBox = () => {
     const onSubmitHandler= (event) => {

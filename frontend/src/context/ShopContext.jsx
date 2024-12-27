@@ -2,7 +2,8 @@ import { createContext, useEffect, useState } from "react"
 import { products as inbuilt_products } from "../assets/assets.js"
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
+import { useMemo } from "react";
 
 export const ShopContext = createContext();
 

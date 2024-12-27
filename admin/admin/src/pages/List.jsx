@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { backendUrl,currency } from "../App";
 import axios from "axios";
 import { toast } from "react-toastify";
+import cors from 'cors'
 
 const List = ({token}) => {
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
+import cors from 'cors'
 
 const Sidebar = () => {
   return(

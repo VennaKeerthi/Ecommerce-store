@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { useMemo } from "react";
 
 const OurPolicy = () => {
     return (

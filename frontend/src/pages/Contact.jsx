@@ -3,6 +3,7 @@ import Title from "../components/Title";
 import { assets } from "../assets/assets";
 import NewsletterBox from "../components/NewsletterBox";
 
+
 const Contact = () => {
     return(
         <div>

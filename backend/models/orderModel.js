@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import cors from 'cors'
 
 const orderSchema = new mongoose.Schema({
     userId: {type: String,required:true},

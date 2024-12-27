@@ -2,6 +2,7 @@ import express from "express"
 import {placeOrder,placeOrderRazorpay,placeOrderStripe,allOrders,userOrders,updateStatus,verifyStripe} from "../controllers/orderController.js"
 import adminAuth from "../middleware/adminAuth.js"
 import authUser from "../middleware/auth.js"
+import cors from 'cors'
 
 const orderRouter = express.Router()
 

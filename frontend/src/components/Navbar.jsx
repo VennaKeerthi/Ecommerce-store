@@ -2,6 +2,7 @@ import React,{useContext, useState,useEffect} from "react";
 import {assets} from "../assets/assets"
 import { Link,NavLink } from "react-router-dom";
 import {ShopContext} from "../context/ShopContext";
+import { useMemo } from "react";
 
 const Navbar = () => {
     const [visible,setVisible] = useState(false)

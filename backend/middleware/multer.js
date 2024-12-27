@@ -1,4 +1,5 @@
 import multer from "multer";
+import cors from 'cors'
 
 const storage = multer.diskStorage({
     filename:function(req,file,callback){

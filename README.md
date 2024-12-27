@@ -34,5 +34,5 @@ This is a full-stack ecommerce application for a fashion store where users can b
 - **Razorpay** (if added later)
 
 ### Deployment:
-- **Frontend:** Render
-- **Backend:** Deployed on Render 
+- **Frontend:** Render (Static site)
+- **Backend:** Render (Web service)

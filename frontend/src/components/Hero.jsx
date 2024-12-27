@@ -1,4 +1,5 @@
 import React from "react";
+import { useMemo } from "react";
 import { assets } from "../assets/assets";
 
 const Hero = () => {

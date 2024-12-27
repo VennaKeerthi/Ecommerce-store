@@ -1,5 +1,5 @@
 import userModel from "../models/userModel.js"
-
+import cors from 'cors'
 // add products to user cart
 const addToCart = async(req,res) => {
     try{
