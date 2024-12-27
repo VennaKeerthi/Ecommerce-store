@@ -1,4 +1,4 @@
-# Ecommerce Fashion Store 🎪:
+# Ecommerce Fashion Store:
 
 This is a full-stack ecommerce application for a fashion store where users can browse, add products to their cart, and place orders with multiple payment options, including Cash on Delivery (COD) and Stripe integration. The project is built with a focus on user-friendly design, secure payment processing, and efficient order management.
 
