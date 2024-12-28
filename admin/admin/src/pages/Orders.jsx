@@ -3,7 +3,6 @@ import axios from "axios"
 import { backendUrl, currency } from "../App";
 import { toast } from "react-toastify";
 import { assets } from "../assets/assets";
-import cors from 'cors'
 
 const Orders = ({token}) => {
 
